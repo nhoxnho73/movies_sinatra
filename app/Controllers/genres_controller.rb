@@ -7,6 +7,7 @@ class GenresController < ApplicationController
 
     if @genre
       @movies = @current_user.movies.where(genre: @genre)
+      erb :'genres/show_genre'
     else
       flash[:alert] = "Can't find this genre"
       redirect '/movies'
