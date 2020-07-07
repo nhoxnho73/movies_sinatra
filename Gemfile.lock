@@ -62,10 +62,7 @@ PLATFORMS
 DEPENDENCIES
   activerecord
   bcrypt
-<<<<<<< HEAD
-=======
   pony
->>>>>>> dev
   pry-rails
   rack-flash3
   rake
