@@ -14,6 +14,7 @@ gem 'require_all'
 gem 'sinatra-activerecord', :require => 'sinatra/activerecord'
 gem 'bcrypt'
 gem 'rack-flash3', require: 'rack-flash'
+gem 'pony'
 
 group :production do
   # Use Postgresql for ActiveRecord

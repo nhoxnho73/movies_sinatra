@@ -9,11 +9,16 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    # raise params.inspect
     @user = User.new params[:user]
 
-    if @user.save 
+    if @user.save
       session[:user_id] = @user.id
+      Pony.mail(
+        to: 'admin@xample.com',
+        from: "MyApp Help Desk <noreply@myapp.com>",
+        subject: "MyApp Account Verification",
+        body: "account create successfull"
+      )
       flash[:info] = "You've been successfully registered"
       redirect '/movies'
     else

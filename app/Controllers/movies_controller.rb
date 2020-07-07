@@ -67,6 +67,7 @@ class MoviesController < ApplicationController
   end
 
   put '/movies/:id' do
+    #require user login
     require_logged_in
     @movie = @current_user.movies.find_by(id: params[:id])
     if @movie
